@@ -23,13 +23,7 @@ export default function App()
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator> 
-          <Stack.Screen 
-            name="Onboarding"
-            component={Onboarding}
-            options={{
-              headerShown: false
-            }}
-          />
+        
           <Stack.Screen
             name="Login"
             component={Login}

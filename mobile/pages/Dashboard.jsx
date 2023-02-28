@@ -18,9 +18,9 @@ const DashboardScreen = () => {
 
   const loadScooters = async () => {
     try {
-      // const response = await fetch("http://192.168.9.30:5000/client/scooters");   // for my laptop wifi
+     
       const response = await fetch(
-        "http://192.168.43.154:5000/client/scooters"     // for my phone wifi
+        "http://localhost:8000/client/scooters"     // for my phone wifi
       );
       const text = await response.text();
       const data = JSON.parse(text);
@@ -107,9 +107,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-
     backgroundColor: "#3ED400",
-
     padding: 20,
   },
   title: {

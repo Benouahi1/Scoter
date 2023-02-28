@@ -10,7 +10,7 @@ const App = () => {
   const loadMarkers = async () => {
     try {
       const response = await fetch(
-        "http://192.168.43.154:5000/client/scooters"
+        "http://localhost:8000/client/scooters"
       );
       const text = await response.text();
       const data = JSON.parse(text);
@@ -30,26 +30,35 @@ const App = () => {
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: 33.749,
-          longitude: -84.388,
+          latitude: 32.2930773,
+          longitude: -9.2366928,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
       >
-        {isLoading
-          ? null
-          : markers.map((marker, index) => (
+       
               <Marker
-                key={index}
+                // key={index}
                 coordinate={{
-                  latitude: marker.latitude,
-                  longitude: marker.longitude,
+                  latitude:32.2930773,
+                  longitude:-9.2366928,
                 }}
-                title={marker.name}
-                description={marker.description}
-                pinColor="#2E7D32"
+                title="Ayoub"
+                description="scooter 2"
+                pinColor="#F9F9F9"
               />
-            ))}
+
+<Marker
+                // key={index}
+                coordinate={{
+                  latitude:32.2930773,
+                  longitude:-9.2066928,
+                }}
+                title="merwan"
+                description="scooter 3"
+                pinColor="#F9F9F9"
+              />
+          
       </MapView>
     </View>
   );

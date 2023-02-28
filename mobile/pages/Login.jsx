@@ -18,7 +18,7 @@ const LoginScreen = () => {
 
     const handleLogin = async () => {
         try {
-          const res = await fetch("http://192.168.43.154:5000/client/login", {
+          const res = await fetch("http://localhost:8000/client/login", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -46,12 +46,12 @@ const LoginScreen = () => {
     <View style={styles.container}>
       <Image
         style={{ width: 150, height: 150 }}
-        source={require("../assets/esccoter1.png")}
+        source={require("../assets/esccoter3.png")}
       />
 
       <Text style={styles.title}>Login</Text>
       <View style={styles.formContainer}>
-        {/* <Image source={require("../assets/email.png")} style={styles.icon} /> */}
+        
         <TextInput
           style={styles.input}
           placeholder="Email"
@@ -62,7 +62,7 @@ const LoginScreen = () => {
         />
       </View>
       <View style={styles.formContainer}>
-        {/* <Image source={require("../assets/email.png")} style={styles.icon} /> */}
+       
         <TextInput
           style={styles.input}
           placeholder="Password"
@@ -70,7 +70,7 @@ const LoginScreen = () => {
           value={password}
           onChangeText={setPassword}
         />
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate("Nav")}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Register")}>
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 40,
-    backgroundColor: "#92E3A9",
+    backgroundColor: "#92bae3",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 4,
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   registerLink: {
-    color: "#92E3A9",
+    color: "#92bae3",
     fontWeight: "bold",
   },
  

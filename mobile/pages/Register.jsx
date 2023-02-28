@@ -19,8 +19,8 @@ const Register = () => {
     const handleRegister = async () =>
     {
        try {
-            // const res = await fetch( "http://192.168.9.30:5000/client/register",
-       const res = await fetch("http://192.168.43.154:5000/client/register", {
+            
+       const res = await fetch("http://localhost:8000/client/register", {
          method: "POST",
          headers: {
            "Content-Type": "application/json",
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 45,
-    backgroundColor: "#92E3A9",
+    backgroundColor: "#92bae3",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 4,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   registerLink: {
-    color: "#92E3A9",
+    color: "#92bae3",
     fontWeight: "bold",
   },
 });
